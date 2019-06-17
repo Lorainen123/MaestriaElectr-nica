@@ -1,1 +1,1 @@
-# MaestriaElectr-nica
+# MaestriaUninorte
