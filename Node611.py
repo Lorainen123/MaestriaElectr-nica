@@ -1,5 +1,7 @@
 import spidev
 import time
+import mcpras
+import excel
 import os
 from math import *
 from time import sleep
@@ -50,6 +52,12 @@ try:
                   shunt_adc=ina.ADC_128SAMP)
 except:
     time.sleep(0.1)
+
+v = input()
+n = excel.main(float(v),0)
+n = int(n)
+mcpras.set_value(n)
+
 #Configuration SPI Port and device
 SPI_PORT   = 0
 SPI_DEVICE = 0
