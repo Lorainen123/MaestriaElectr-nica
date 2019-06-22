@@ -89,27 +89,28 @@ while True:
 
     t = 0
     while t<100:
-        #Reading of each adc channel
-          A1 = mcp.read_adc(2)
-	  A2 = mcp.read_adc(7)
-	  A3 = mcp.read_adc(3)
-	  A4 = mcp.read_adc(1)
-	  A5 = mcp.read_adc(0)
-	  V1 = mcp.read_adc(4)
-	  V2 = mcp.read_adc(5)
-	  V3 = mcp.read_adc(6)
+      #Reading of each adc channel
+      A1 = mcp.read_adc(2)
+      A2 = mcp.read_adc(7)
+      A3 = mcp.read_adc(3)
+      A4 = mcp.read_adc(1)
+      A5 = mcp.read_adc(0)
+      V1 = mcp.read_adc(4)
+      V2 = mcp.read_adc(5)
+      V3 = mcp.read_adc(6)
        
-	  #Sum of each measure
-	  S1 = S1 + A1
-	  S2 = S2 + A2
-	  S3 = S3 + A3
-	  S4 = S4 + A4
-	  S5 = S5 + A5
-	  S6 = S6 + V1
-	  S7 = S7 + V2
-	  S8 = S8 + V3
+     #Sum of each measure
+      S1 = S1 + A1
+      S2 = S2 + A2
+      S3 = S3 + A3
+      S4 = S4 + A4
+      S5 = S5 + A5
+      S6 = S6 + V1
+      S7 = S7 + V2 
+      S8 = S8 + V3
 
-	  t = t + 1
+      t = t + 1
+
     m =100
     #Value for zero adjustment of the sensors
     Aju=4
