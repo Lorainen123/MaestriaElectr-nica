@@ -1,7 +1,7 @@
-import spidev
+##import spidev
 import time
-import mcpras
-import excel
+##import mcpras
+##import excel
 import os
 from math import *
 from time import sleep
@@ -53,10 +53,10 @@ try:
 except:
     time.sleep(0.1)
 
-v = input()
-n = excel.main(float(v),0)
-n = int(n)
-mcpras.set_value(n)
+##v = input()
+##n = excel.main(float(v),0)
+##n = int(n)
+##mcpras.set_value(n)
 
 #Configuration SPI Port and device
 SPI_PORT   = 0
