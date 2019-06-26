@@ -292,4 +292,5 @@ while True:
     print("Potencia del panel = "+Pp)
     print("Voltaje del panel = "+Vpanel)
     print("Potencia de la bateria = "+Pb)
+    time.sleep(3)
 
