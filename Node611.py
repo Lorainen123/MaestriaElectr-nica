@@ -116,7 +116,7 @@ while True:
     Aju=4
     #Conversion of digital value to analog
     #current sensors	
-    S_1m = ((S1/m)*(5.0/1023))
+    S_1m = ((S1/m)*(5.153/1023))
     S_1=-25.3+10*S_1m
 
     S_2m=((S2/m)*(5.0/1023))
