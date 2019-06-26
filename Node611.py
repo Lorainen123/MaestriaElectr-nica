@@ -1,7 +1,7 @@
-##import spidev
+import spidev
 import time
-##import mcpras
-##import excel
+import mcpras
+import excel
 import os
 from math import *
 from time import sleep
@@ -13,6 +13,10 @@ import Adafruit_GPIO.SPI as SPI
 import RPi.GPIO as GPIO
 import serial
 from ina219 import INA219
+import numpy as np
+import skfuzzy as fuzz
+from skfuzzy import control as ctrl
+
 #Sensor and I2C configuration
 try:
     ina = INA219(shunt_ohms=0.1,
