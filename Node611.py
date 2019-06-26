@@ -116,28 +116,28 @@ while True:
     Aju=4
     #Conversion of digital value to analog
     #current sensors	
-    S_1m = ((S1/m)*(5.153/1023))
+    S_1m = ((S1/m)*(5.15/1023))
     S_1=-25.3+10*S_1m
 
-    S_2m=((S2/m)*(5.0/1023))
+    S_2m=((S2/m)*(5.15/1023))
     S_2=-25.3+10*S_2m
  
-    S_3m=((S3/m)*(5.0/1023))
+    S_3m=((S3/m)*(5.15/1023))
     S_3=-25.3+10*S_3m
  
-    S_4m=((S4/m)*(5.0/1023))
+    S_4m=((S4/m)*(5.15/1023))
     S_4=-25.3+10*S_4m
     
-    S_5m=((S5/m)*(5.0/1023))
+    S_5m=((S5/m)*(5.15/1023))
     S_5=-25.3+10*S_5m
     
     #voltage sensors
-    S_6_temp = ((S6/m)*(5.0/1023))
+    S_6_temp = ((S6/m)*(5.15/1023))
     S_6 = 5.936*(S_6_temp-3.155)+32.8
     
-    S_7 = ((S7/m)*(5.0/1023))*(37.5/7.5)
+    S_7 = ((S7/m)*(5.15/1023))*(37.5/7.5)
     
-    S_8 = ((S8/m)*(5.0/1023))*(37000.0/7500.0)      
+    S_8 = ((S8/m)*(5.15/1023))*(37000.0/7500.0)      
  
 
    #Condition that Current sensor of the first buck is zero, the voltage of the sources is zero
