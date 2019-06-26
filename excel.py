@@ -3,7 +3,7 @@ from openpyxl import Workbook
 import os.path
 def main(v,d):
     # Connect to DB -----------------------------------------------------------
-    db = mysql.connector.connect( user='datos2019', password='123452019', host='127.0.0.1')
+    db = mysql.connector.connect( user='Node611', password='hola12345', host='localhost')
     cur = db.cursor()
     if d==0:
         database = 'panelpf'
