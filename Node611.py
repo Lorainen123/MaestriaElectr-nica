@@ -78,19 +78,7 @@ GPIO.output(26,True)
 t=0
 #Cycle for to take measures
 vr=True
-while True:
-    
-    if (vr==True):
-
-        v = 18.4
-    else:
-        v = 18.3
-	
-	
-    n = excel.main(float(v),0)
-    n = int(n)
-    mcpras.set_value(n)
-  
+def sensorm():	
     #Initialization of sensors
     S1 = 0
     S2 = 0
@@ -161,25 +149,25 @@ while True:
 
    #Condition that Current sensor of the first buck is zero, the voltage of the sources is zero
    
-    if(S_1<0.5 or S_2<0.5):
-        Sw = 0
-    if(S_1>0.5 or S_2>0.5):
-        Sw = 1
+   # if(S_1<0.5 or S_2<0.5):
+   #     Sw = 0
+   # if(S_1>0.5 or S_2>0.5):
+   #     Sw = 1
     #Condition for disconnection of non-essential load
     #If the current sensor values of the first buck and the solar panel
     # are lower than a set value and the inverter sensor current is greater than a set value
     #you must disconnect the non-essential load
-    if ( (S_5-S_3)>0.5 and Sw==0):
-	    GPIO.output(16, False)
-	    print("Carga desconectada")
-	    ctrl=str(0)
+   # if ( (S_5-S_3)>0.5 and Sw==0):
+   #	    GPIO.output(16, False)
+   #	    print("Carga desconectada")
+   #	    ctrl=str(0)
     #If the current sensor values of the first buck or solar panel are higher
     #than a set value and the inverter sensor current is greater than a set value,
     #you must disconnect the non-essential load
-    elif ((S_5-S_3)<0.5 and Sw==1): 
-	    GPIO.output(16, True)
-	    print("Carga conectada")
-	    ctrl=str(1)
+   # elif ((S_5-S_3)<0.5 and Sw==1): 
+   #	    GPIO.output(16, True)
+   #	    print("Carga conectada")
+   #	    ctrl=str(1)
 
    
     #Verification of charge current for the battery.Charging mode
@@ -287,6 +275,6 @@ while True:
     #print("Potencia de la bateria = "+Pb)
     
 	
-    vr=not vr
-    time.sleep(0.01)
+  #  vr=not vr
+ #   time.sleep(0.01)
 
