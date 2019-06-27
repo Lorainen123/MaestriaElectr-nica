@@ -60,13 +60,13 @@ while True:
     
   else:
    
-    n = excel.main(float(v),0)
-    n = int(n)
-    mcpras.set_value(n)
-    P1=Node611.sensorm()
+   # n = excel.main(float(v),0)
+   # n = int(n)
+   # mcpras.set_value(n)
+   # P1=Node611.sensorm()
     
-    Pdif=P2-P1
-    P2=P1
+   # Pdif=P2-P1
+   # P2=P1
     
   vrefout.input['Pdif']=Pdif
   vrefout.compute()
@@ -74,9 +74,9 @@ while True:
   
   
   
-  P2=str(P2)
+  Pdif=str(Pdif)
   Vrefin=str(Vrefin)
-  print("Potencia del panel = "+P2)
+  print("Potencia del panel = "+Pdif)
   print("Cambio de voltaje = "+Vrefin)
  
   
