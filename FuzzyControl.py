@@ -4,6 +4,11 @@ from skfuzzy import control as ctrl
 import Node611
 
 
+ v=17
+ n = excel.main(float(v),0)
+ n = int(n)
+ mcpras.set_value(n)
+
 #Fuzzy Controller 
 
 Vrefd = ctrl.Consequent(np.arange(-2, 2, 0.1), 'Vrefd')
@@ -36,3 +41,10 @@ vrefout = ctrl.ControlSystemSimulation(vref_ctrl)
 vrefout.input['Pdif']=0.1
 vrefout.compute()
 Vrefin=round(vrefout.output['Vrefd'],2)
+
+while True:
+  Pp=Node611.sensorm()
+  Pp=str(Pp)
+  printf("Potencia del panel",+Pp)
+  
+  
