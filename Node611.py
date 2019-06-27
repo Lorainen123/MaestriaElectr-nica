@@ -12,6 +12,8 @@ from ina219 import INA219
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
+import RPi.GPIO as GPIO
+
 #import os.path
 
 
