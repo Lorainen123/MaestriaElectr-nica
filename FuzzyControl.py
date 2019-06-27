@@ -48,6 +48,6 @@ while True:
   mcpras.set_value(n)
   Pp=Node611.sensorm()
   Pp=str(Pp)
-  print("Potencia del panel",+Pp)
+  print("Potencia del panel = "+Pp)
   
   
