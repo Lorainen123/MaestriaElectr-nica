@@ -104,19 +104,7 @@ while True:
 
     t = 0
     while t<800:
-		
-      try:
 	
-        i = round(ina.current()/1000,2)
-        i1 = round(ina1.current()/1000,2)
-        i2 = round(ina2.current()/1000,2)
-        i3 = round(ina3.current()/1000,2)
-	
-      except:
-        i=0.0
-        i1=0.0
-        i2=0.0
-        i3=0.0
       
       #Reading of each adc channel
       A1 = mcp.read_adc(2)
@@ -210,6 +198,22 @@ while True:
     #    GPIO.output(20, False)
      #   GPIO.output(26, True)
     #Change of currents less than 0 to a value close to 0 but positive
+
+
+    	
+    try:
+	
+        i = round(ina.current()/1000,2)
+        i1 = round(ina1.current()/1000,2)
+        i2 = round(ina2.current()/1000,2)
+        i3 = round(ina3.current()/1000,2)
+	
+    except:
+        i=0.0
+        i1=0.0
+        i2=0.0
+        i3=0.0
+	
     if(i<=0.0):
         i=0.0001
     if(i1<=0.0):
