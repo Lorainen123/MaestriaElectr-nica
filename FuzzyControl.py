@@ -4,10 +4,10 @@ from skfuzzy import control as ctrl
 import Node611
 
 
- v=17
- n = excel.main(float(v),0)
- n = int(n)
- mcpras.set_value(n)
+v=17
+n = excel.main(float(v),0)
+n = int(n)
+mcpras.set_value(n)
 
 #Fuzzy Controller 
 
