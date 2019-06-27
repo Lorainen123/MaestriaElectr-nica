@@ -58,10 +58,7 @@ except:
     time.sleep(0.1)
 
 
-v = 18.4
-n = excel.main(float(v),0)
-n = int(n)
-mcpras.set_value(n)
+
 
 #Configuration SPI Port and device
 SPI_PORT   = 0
@@ -79,7 +76,19 @@ GPIO.output(20,False)
 GPIO.output(26,True)  
 t=0
 #Cycle for to take measures
+vr=True
 while True:
+    
+    if (vr==True):
+
+        v = 18.4
+    else:
+        v = 18.3
+	
+	
+    n = excel.main(float(v),0)
+    n = int(n)
+    mcpras.set_value(n)
   
     #Initialization of sensors
     S1 = 0
@@ -299,5 +308,8 @@ while True:
     print("Potencia del panel = "+Pp)
     print("Voltaje del panel = "+Vpanel)
     #print("Potencia de la bateria = "+Pb)
+    
+	
+    vr=not vr
     time.sleep(0.01)
 
