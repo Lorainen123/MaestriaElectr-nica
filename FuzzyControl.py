@@ -45,7 +45,7 @@ while True:
     mcpras.set_value(n)
     P1=Node611.sensorm()
    
-    time.sleep(0.01)
+    time.sleep(1)
     
     n = excel.main(float(v+0.2),0)
     n = int(n)
