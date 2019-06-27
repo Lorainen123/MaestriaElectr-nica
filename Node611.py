@@ -2,6 +2,7 @@
 ##Importación de librerias
 import spidev
 import os
+import sys
 from math import *
 from time import sleep
 import serial
