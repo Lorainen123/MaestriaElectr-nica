@@ -93,7 +93,7 @@ while True:
     S_6_temp=0
 
     t = 0
-    while t<500:
+    while t<1000:
       #Reading of each adc channel
       A1 = mcp.read_adc(2)
       A2 = mcp.read_adc(7)
@@ -299,5 +299,5 @@ while True:
     print("Potencia del panel = "+Pp)
     print("Voltaje del panel = "+Vpanel)
     #print("Potencia de la bateria = "+Pb)
-    time.sleep(0.1)
+    time.sleep(0.01)
 
