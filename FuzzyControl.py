@@ -73,10 +73,8 @@ while True:
   Vrefin=round(vrefout.output['Vrefd'],2)
   
   
-  
-  Pdif=str(Pdif)
   Vrefin=str(Vrefin)
-  print("Potencia del panel = "+Pdif)
+  print("Potencia del panel = "+str(Pdif))
   print("Cambio de voltaje = "+Vrefin)
  
   
