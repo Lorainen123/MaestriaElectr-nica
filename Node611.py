@@ -15,8 +15,6 @@ import RPi.GPIO as GPIO
 #import os.path
 
 
-import mcpras #Importacion de funciones externas
-import excel
 
 
 
@@ -243,7 +241,6 @@ def sensorm():
     i1=str(i1)
     i2=str(i2)
     i3=str(i3)
-    v=str(v)
     Vpanel=str(Vpanel)
     S_1=str(round(S_1,2))
     S_2=str(round(S_2,1))
