@@ -57,10 +57,11 @@ try:
 except:
     time.sleep(0.1)
 
-##v = input()
-##n = excel.main(float(v),0)
-##n = int(n)
-##mcpras.set_value(n)
+
+v = 17
+n = excel.main(float(v),0)
+n = int(n)
+mcpras.set_value(n)
 
 #Configuration SPI Port and device
 SPI_PORT   = 0
@@ -279,22 +280,22 @@ while True:
     S_8=str(round(S_8,2))
     #Print values of each sensor
     #Sensors viewed from left to right and from bottom to top
-    print("Corriente sensor 1 = "+i)   ## Sensor de corriente 1 de I2C
-    print("Corriente sensor 2 = "+i1)	## Sensor de corriente 2 de I2C
-    print("Corriente sensor 3 = "+i2)	## Sensor de corriente 3 de I2C
-    print("Corriente sensor 4 = "+i3)	## Sensor de corriente 4 de I2C
+    #print("Corriente sensor 1 = "+i)   ## Sensor de corriente 1 de I2C
+    #print("Corriente sensor 2 = "+i1)	## Sensor de corriente 2 de I2C
+    #print("Corriente sensor 3 = "+i2)	## Sensor de corriente 3 de I2C
+    #print("Corriente sensor 4 = "+i3)	## Sensor de corriente 4 de I2C
 
-    print("Voltaje sensor 1 = "+S_6)	## Sensor 1 de ADC  Canal 4
-    print("Corriente sensor 5 = "+S_1)	## Sensor 2 de ADC  Canal 2
-    print("Corriente sensor 6 = "+S_2)	## Sensor 3 de ADC  Canal 7
+    #print("Voltaje sensor 1 = "+S_6)	## Sensor 1 de ADC  Canal 4
+    #print("Corriente sensor 5 = "+S_1)	## Sensor 2 de ADC  Canal 2
+    print("Corriente sensor panel solar = "+S_2)	## Sensor 3 de ADC  Canal 7
     print("Voltaje sensor 2 = "+S_7)	## Sensor 4 de ADC  Canal 5
-    print("Corriente sensor 7 = "+S_3)	## Sensor 5 de ADC  Canal 3
-    print("Corriente sensor 8 = "+S_4)	## Sensor 6 de ADC  Canal 1
-    print("Corriente sensor 9 = "+S_5)	## Sensor 7 de ADC  Canal 0
-    print("Voltaje sensor 3 = "+S_8)	## Sensor 8 de ADC  Canal 6
-    print("Potencia de la fuente = "+Pf)
+    #print("Corriente sensor 7 = "+S_3)	## Sensor 5 de ADC  Canal 3
+    #print("Corriente sensor 8 = "+S_4)	## Sensor 6 de ADC  Canal 1
+    #print("Corriente sensor 9 = "+S_5)	## Sensor 7 de ADC  Canal 0
+    #print("Voltaje sensor 3 = "+S_8)	## Sensor 8 de ADC  Canal 6
+    #print("Potencia de la fuente = "+Pf)
     print("Potencia del panel = "+Pp)
     print("Voltaje del panel = "+Vpanel)
-    print("Potencia de la bateria = "+Pb)
+    #print("Potencia de la bateria = "+Pb)
     time.sleep(0.1)
 
