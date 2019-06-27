@@ -1,3 +1,6 @@
+import mysql.connector
+from openpyxl import Workbook
+
 
 def main(v,d):
     # Connect to DB -----------------------------------------------------------
