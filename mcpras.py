@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 
 SPI_CS_PIN = 17
 SPI_SDISDO_PIN = 22 # mosi
