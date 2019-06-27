@@ -18,7 +18,7 @@ from openpyxl import Workbook
 #import os.path
 
 
-import mcpras #Importación de funciones externas
+import mcpras #Importacion de funciones externas
 import excel
 
 
