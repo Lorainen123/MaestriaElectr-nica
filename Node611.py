@@ -93,7 +93,7 @@ while True:
     S_6_temp=0
 
     t = 0
-    while t<1000:
+    while t<800:
       #Reading of each adc channel
       A1 = mcp.read_adc(2)
       A2 = mcp.read_adc(7)
