@@ -10,9 +10,6 @@ import requests
 import Adafruit_MCP3008
 import Adafruit_GPIO.SPI as SPI
 from ina219 import INA219
-import numpy as np
-import skfuzzy as fuzz
-from skfuzzy import control as ctrl
 import RPi.GPIO as GPIO
 
 #import os.path
