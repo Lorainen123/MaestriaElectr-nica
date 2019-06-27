@@ -229,7 +229,7 @@ def sensorm():
     Vp=round(0.0326*log(S_2)+0.7812,3)
     Vpanel=1.1+S_7
     #Power of the panel
-    Pp = str(round((Vpanel)*S_2,1))
+    Pp = round((Vpanel)*S_2,1)
     #Calculation of battery current
     Ib = S_5-S_3+S_4
     
@@ -262,18 +262,18 @@ def sensorm():
 
     #print("Voltaje sensor 1 = "+S_6)	## Sensor 1 de ADC  Canal 4
     #print("Corriente sensor 5 = "+S_1)	## Sensor 2 de ADC  Canal 2
-    print("Corriente sensor panel solar = "+S_2)	## Sensor 3 de ADC  Canal 7
-    print("Voltaje sensor 2 = "+S_7)	## Sensor 4 de ADC  Canal 5
+    #print("Corriente sensor panel solar = "+S_2)	## Sensor 3 de ADC  Canal 7
+    #print("Voltaje sensor 2 = "+S_7)	## Sensor 4 de ADC  Canal 5
     #print("Corriente sensor 7 = "+S_3)	## Sensor 5 de ADC  Canal 3
     #print("Corriente sensor 8 = "+S_4)	## Sensor 6 de ADC  Canal 1
     #print("Corriente sensor 9 = "+S_5)	## Sensor 7 de ADC  Canal 0
     #print("Voltaje sensor 3 = "+S_8)	## Sensor 8 de ADC  Canal 6
     #print("Potencia de la fuente = "+Pf)
-    print("Potencia del panel = "+Pp)
-    print("Voltaje del panel = "+Vpanel)
-    print("Voltaje de referencia = "+v)
+    #print("Potencia del panel = "+Pp)
+    #print("Voltaje del panel = "+Vpanel)
+    #print("Voltaje de referencia = "+v)
     #print("Potencia de la bateria = "+Pb)
-    
+    return Pp
 	
   #  vr=not vr
  #   time.sleep(0.01)
