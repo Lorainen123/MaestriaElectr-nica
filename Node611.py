@@ -1,5 +1,4 @@
 
-##Importación de librerias
 import spidev
 import os
 import sys
