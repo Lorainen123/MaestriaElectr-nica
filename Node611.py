@@ -61,9 +61,6 @@ try:
 except:
     time.sleep(0.1)
 
-
-
-
 #Configuration SPI Port and device
 SPI_PORT   = 0
 SPI_DEVICE = 0
@@ -107,6 +104,13 @@ while True:
 
     t = 0
     while t<800:
+		
+         
+      i = round(ina.current()/1000,2)
+      i1 = round(ina1.current()/1000,2)
+      i2 = round(ina2.current()/1000,2)
+      i3 = round(ina3.current()/1000,2)
+      
       #Reading of each adc channel
       A1 = mcp.read_adc(2)
       A2 = mcp.read_adc(7)
@@ -181,47 +185,7 @@ while True:
 	    GPIO.output(16, True)
 	    print("Carga conectada")
 	    ctrl=str(1)
-    #Take values of each low current sensor
-    try:
-        ina = INA219(shunt_ohms=0.1,
-                 max_expected_amps = 2.0,
-                 address=0x40)
-        
-        ina1 = INA219(shunt_ohms=0.1,
-                 max_expected_amps = 2.0,
-                 address=0x44)
 
-        ina2 = INA219(shunt_ohms=0.1,
-                 max_expected_amps = 2.0,
-                 address=0x41)
-
-        ina3 = INA219(shunt_ohms=0.1,
-                 max_expected_amps = 2.0,
-                 address=0x45)
-
-        ina.configure(voltage_range=ina.RANGE_32V,
-                  gain=ina.GAIN_AUTO,
-                  bus_adc=ina.ADC_128SAMP,
-                  shunt_adc=ina.ADC_128SAMP)
-
-        ina1.configure(voltage_range=ina.RANGE_32V,
-                  gain=ina.GAIN_AUTO,
-                  bus_adc=ina.ADC_128SAMP,
-                  shunt_adc=ina.ADC_128SAMP)
-
-        ina2.configure(voltage_range=ina.RANGE_32V,
-                  gain=ina.GAIN_AUTO,
-                  bus_adc=ina.ADC_128SAMP,
-                  shunt_adc=ina.ADC_128SAMP)
-
-        ina3.configure(voltage_range=ina.RANGE_32V,
-                  gain=ina.GAIN_AUTO,
-                  bus_adc=ina.ADC_128SAMP,
-                  shunt_adc=ina.ADC_128SAMP)
-        i = round(ina.current()/1000,2)
-        i1 = round(ina1.current()/1000,2)
-        i2 = round(ina2.current()/1000,2)
-        i3 = round(ina3.current()/1000,2)
     except:
         i=0.0
         i1=0.0
