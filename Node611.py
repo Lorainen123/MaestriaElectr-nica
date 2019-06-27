@@ -126,6 +126,7 @@ while True:
 
     S_2m=((S2/t)*(5.15/1023))
     S_2=-25.3+10*S_2m
+    S_2=round(S_2,1)
  
     S_3m=((S3/t)*(5.15/1023))
     S_3=-25.3+10*S_3m
@@ -141,6 +142,7 @@ while True:
     S_6 = 5.936*(S_6_temp-3.155)+32.8
     
     S_7 = ((S7/t)*(5.15/1023))*(37.5/7.5)
+    S_7 = round(S_7,1)
     
     S_8 = ((S8/t)*(5.15/1023))*(37000.0/7500.0)      
  
@@ -271,12 +273,12 @@ while True:
     i3=str(i3)
     Vpanel=str(Vpanel)
     S_1=str(round(S_1,2))
-    S_2=str(round(S_2,2))
+    S_2=str(round(S_2,1))
     S_3=str(round(S_3,2))
     S_4=str(round(S_4,2))
     S_5=str(round(S_5,2))
     S_6=str(round(S_6,2))
-    S_7=str(round(S_7,2))
+    S_7=str(round(S_7,1))
     S_8=str(round(S_8,2))
     #Print values of each sensor
     #Sensors viewed from left to right and from bottom to top
