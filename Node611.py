@@ -17,8 +17,8 @@ import mysql.connector
 from openpyxl import Workbook
 #import os.path
 
-#Importación de funciones externas
-import mcpras
+
+import mcpras #Importación de funciones externas
 import excel
 
 
