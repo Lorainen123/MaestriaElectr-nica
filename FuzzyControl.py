@@ -74,9 +74,9 @@ while True:
   
   
   
-  Pp=str(Pp)
+  P2=str(P2)
   Vrefin=str(Vrefin)
-  print("Potencia del panel = "+Pp)
+  print("Potencia del panel = "+P2)
   print("Cambio de voltaje = "+Vrefin)
  
   
