@@ -45,7 +45,7 @@ while True:
     mcpras.set_value(n)
     P1=Node611.sensorm()
    
-    time.sleep(0.1)
+    time.sleep(0.5)
     
     n = excel.main(float(v+0.1),0)
     n = int(n)
@@ -61,8 +61,10 @@ while True:
     Vrefin=round(vrefout.output['Vrefd'],2)
     v=v+Vrefin
   
-  
-    print("Potencia del panel = "+str(P2))
+    print("Potencia del panel t= "+str(P1))
+    print("Potencia del panel  t+1 = "+str(P2))
+    print("Vref = "+str(v))
+    print("Cambio de potencia = "+str(Pdif))
     print("Cambio de voltaje = "+str(Vrefin))
  
   
