@@ -4,8 +4,7 @@ from skfuzzy import control as ctrl
 import Node611
 import excel
 import mcpras 
-from time import sleep
-
+import time
 
 
 #Fuzzy Controller 
