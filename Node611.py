@@ -13,6 +13,9 @@ from ina219 import INA219
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
+import mysql.connector
+from openpyxl import Workbook
+#import os.path
 
 #Importación de funciones externas
 import mcpras
