@@ -253,9 +253,9 @@ while True:
     #Calculation of panel voltage
     #Vp = ((2.5+S_2*0.1)*6)
     Vp=round(0.0326*log(S_2)+0.7812,3)
-    Vpanel=Vp+S_7
+    Vpanel=1.1+S_7
     #Power of the panel
-    Pp = str(round((Vpanel+1)*S_2,2))
+    Pp = str(round((Vpanel)*S_2,1))
     #Calculation of battery current
     Ib = S_5-S_3+S_4
     
