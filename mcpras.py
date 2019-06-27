@@ -1,7 +1,3 @@
-import sys
-import time
-import RPi.GPIO as GPIO
-
 SPI_CS_PIN = 17
 SPI_SDISDO_PIN = 22 # mosi
 SPI_CLK_PIN = 23
