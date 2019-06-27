@@ -105,11 +105,18 @@ while True:
     t = 0
     while t<800:
 		
-         
-      i = round(ina.current()/1000,2)
-      i1 = round(ina1.current()/1000,2)
-      i2 = round(ina2.current()/1000,2)
-      i3 = round(ina3.current()/1000,2)
+      try:
+	
+        i = round(ina.current()/1000,2)
+        i1 = round(ina1.current()/1000,2)
+        i2 = round(ina2.current()/1000,2)
+        i3 = round(ina3.current()/1000,2)
+	
+      except:
+        i=0.0
+        i1=0.0
+        i2=0.0
+        i3=0.0
       
       #Reading of each adc channel
       A1 = mcp.read_adc(2)
@@ -186,11 +193,7 @@ while True:
 	    print("Carga conectada")
 	    ctrl=str(1)
 
-    except:
-        i=0.0
-        i1=0.0
-        i2=0.0
-        i3=0.0
+   
     #Verification of charge current for the battery.Charging mode
    # if (S_4>=0.35):
      #   GPIO.output(20, True)
