@@ -3,6 +3,7 @@ import spidev
 import os
 import sys
 from math import *
+import time
 from time import sleep
 import serial
 import requests
