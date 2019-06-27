@@ -36,18 +36,48 @@ rule3=ctrl.Rule(Pdif['Z'],Vrefd['Z'])
 vref_ctrl = ctrl.ControlSystem([rule1, rule2, rule3])
 vrefout = ctrl.ControlSystemSimulation(vref_ctrl)
 
-vrefout.input['Pdif']=0.1
-vrefout.compute()
-Vrefin=round(vrefout.output['Vrefd'],2)
+i= True
 
 while True:
   
-  v = 17
-  n = excel.main(float(v),0)
-  n = int(n)
-  mcpras.set_value(n)
-  Pp=Node611.sensorm()
-  Pp=str(Pp)
-  print("Potencia del panel = "+Pp)
+  if (i==True):
+    
+    v=18
+    n = excel.main(float(v),0)
+    n = int(n)
+    mcpras.set_value(n)
+    P1=Node611.sensorm()
+   
+    time.sleep(0.1)
+    
+    v=18.1
+    n = excel.main(float(v),0)
+    n = int(n)
+    mcpras.set_value(n)
+    P2=Node611.sensorm()
+    Pdif=P2-P1
+    i = not i
+    
+  else:
+   
+    n = excel.main(float(v),0)
+    n = int(n)
+    mcpras.set_value(n)
+    P1=Node611.sensorm()
+    
+    Pdif=P2-P1
+    P2=P1
+    
+   vrefout.input['Pdif']=Pdif
+   vrefout.compute()
+   Vrefin=round(vrefout.output['Vrefd'],2)
+  
+  
+  
+   Pp=str(Pp)
+   Vrefin=str(Vrefin)
+   print("Potencia del panel = "+Pp)
+   print("Cambio de voltaje = "+Vrefin)
+ 
   
   
