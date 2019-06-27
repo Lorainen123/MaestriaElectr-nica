@@ -8,7 +8,6 @@ import serial
 import requests
 import Adafruit_MCP3008
 import Adafruit_GPIO.SPI as SPI
-import RPi.GPIO as GPIO
 from ina219 import INA219
 import numpy as np
 import skfuzzy as fuzz
