@@ -1,21 +1,25 @@
+
+##Importación de librerias
 import spidev
-import time
-import mcpras
-import excel
 import os
 from math import *
 from time import sleep
 import serial
 import requests
-from datetime import datetime as date
 import Adafruit_MCP3008
 import Adafruit_GPIO.SPI as SPI
 import RPi.GPIO as GPIO
-import serial
 from ina219 import INA219
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
+
+#Importación de funciones externas
+import mcpras
+import excel
+
+
+
 
 #Sensor and I2C configuration
 try:
