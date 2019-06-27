@@ -14,8 +14,8 @@ Pdif = ctrl.Antecedent(np.arange(-200, 200, 0.01),'Pdif')
 
 #Pdif
 
-Pdif['N'] = fuzz.trampf(Pdif.universe, [-100,-2, -0.2, -0.01])
-Pdif['P'] = fuzz.trampf(Pdif.universe, [0.01, 0.2, 2, 100])
+Pdif['N'] = fuzz.trapmf(Pdif.universe, [-100,-2, -0.2, -0.01])
+Pdif['P'] = fuzz.trapmf(Pdif.universe, [0.01, 0.2, 2, 100])
 Pdif['Z'] = fuzz.trimf(Pdif.universe, [-0.01,0,0.01])
 
 
