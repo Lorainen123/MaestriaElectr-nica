@@ -23,8 +23,8 @@ Pdif['Z'] = fuzz.trimf(Pdif.universe, [-0.01,0,0.01])
 
 #Vref
 
-Vrefd['N'] = fuzz.trimf(Vrefd.universe, [-0.2, -0.1, 0])
-Vrefd['P'] = fuzz.trimf(Vrefd.universe, [0, 0.1, 0.2])
+Vrefd['N'] = fuzz.trimf(Vrefd.universe, [-0.4, -0.2, 0])
+Vrefd['P'] = fuzz.trimf(Vrefd.universe, [0, 0.2, 0.4])
 Vrefd['Z'] = fuzz.trimf(Vrefd.universe, [-0.01, 0, 0.01])
 
 ##Rules
@@ -47,7 +47,7 @@ while True:
    
     time.sleep(0.5)
     
-    n = excel.main(float(v+0.1),0)
+    n = excel.main(float(v+0.2),0)
     n = int(n)
     mcpras.set_value(n)
     P2=Node611.sensorm()
