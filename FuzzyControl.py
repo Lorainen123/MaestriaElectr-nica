@@ -23,8 +23,8 @@ Pdif['Z'] = fuzz.trimf(Pdif.universe, [-0.01,0,0.01])
 
 #Vref
 
-Vrefd['N'] = fuzz.trimf(Vrefd.universe, [-0.4, -0.2, 0])
-Vrefd['P'] = fuzz.trimf(Vrefd.universe, [0, 0.2, 0.4])
+Vrefd['N'] = fuzz.trimf(Vrefd.universe, [-0.2, -0.1, 0])
+Vrefd['P'] = fuzz.trimf(Vrefd.universe, [0, 0.1, 0.2])
 Vrefd['Z'] = fuzz.trimf(Vrefd.universe, [-0.01, 0, 0.01])
 
 ##Rules
@@ -37,7 +37,7 @@ vref_ctrl = ctrl.ControlSystem([rule1, rule2, rule3])
 vrefout = ctrl.ControlSystemSimulation(vref_ctrl)
 
 i= True
-v=16
+v=18.3
 while True:
   
     n = excel.main(float(v),0)
@@ -47,7 +47,7 @@ while True:
    
     time.sleep(1)
     
-    n = excel.main(float(v),0)
+    n = excel.main(float(v+0.1),0)
     n = int(n)
     mcpras.set_value(n)
     P2=Node611.sensorm()
@@ -59,7 +59,7 @@ while True:
     vrefout.input['Pdif']=Pdif
     vrefout.compute()
     Vrefin=round(vrefout.output['Vrefd'],2)
-   # v=v+Vrefin
+    v=v+Vrefin
   
     print("Potencia del panel t= "+str(P1))
     print("Potencia del panel  t+1 = "+str(P2))
