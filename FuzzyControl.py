@@ -57,9 +57,7 @@ while True:
     P2=Node611.sensorm()
     Pdif=P2-P1
     i = not i
-    
-  else:
-   
+      
    # n = excel.main(float(v),0)
    # n = int(n)
    # mcpras.set_value(n)
